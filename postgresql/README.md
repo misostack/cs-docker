@@ -32,3 +32,13 @@ docker run --name postgres13 --env-file ./.env -v "pg13data:/var/lib/postgresql/
 ```
 
 PGDATA = /var/lib/postgresql/data
+
+
+## PGADMIN 4
+
+Image: dpage/pgadmin4
+
+```bash
+docker run --name pgadmin4 -e PGADMIN_DEFAULT_EMAIL=techlead@sonnm.com -e PGADMIN_DEFAULT_PASSWORD=123456 -p "5050:80" -d dpage/pgadmin4
+docker inspect
+```
