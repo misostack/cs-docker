@@ -57,16 +57,6 @@ docker container exec -it mysql /bin/sh
 docker run --name phpmyadmin -d -e PMA_HOST=172.17.0.1 -e PMA_ARBITRARY=1 -p 8080:80 phpmyadmin
 ```
 
-## Docker Compose
-
-**remove all container name start with "rest-api"**
-```bash
-docker ps --filter name=rest-api -aq | xargs docker stop | xargs docker rm
----
-
-
-
-
 2. Tạo 1 docker image của phpmyadmin kết nối được với mysql container
   
 3. Tạo 1 docker image của phpyadmin kết nối được với mysql của host
@@ -75,3 +65,11 @@ docker ps --filter name=rest-api -aq | xargs docker stop | xargs docker rm
 - https://docs.docker.com/docker-for-mac/networking/#httphttps-proxy-support
 - https://nickjanetakis.com/blog/docker-tip-35-connect-to-a-database-running-on-your-docker-host
 
+
+## Docker Compose
+
+**remove all container name start with "rest-api"**
+
+```bash
+docker ps --filter name=rest-api -aq | xargs docker stop | xargs docker rm
+---
