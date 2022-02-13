@@ -57,6 +57,15 @@ docker container exec -it mysql /bin/sh
 docker run --name phpmyadmin -d -e PMA_HOST=172.17.0.1 -e PMA_ARBITRARY=1 -p 8080:80 phpmyadmin
 ```
 
+## Docker Compose
+
+**remove all container name start with "rest-api"**
+```bash
+docker ps --filter name=rest-api -aq | xargs docker stop | xargs docker rm
+---
+
+
+
 
 2. Tạo 1 docker image của phpmyadmin kết nối được với mysql container
   
