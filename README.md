@@ -72,4 +72,10 @@ docker run --name phpmyadmin -d -e PMA_HOST=172.17.0.1 -e PMA_ARBITRARY=1 -p 808
 
 ```bash
 docker ps --filter name=rest-api -aq | xargs docker stop | xargs docker rm
----
+```
+
+**remove all images has repository name start with "seo"**
+
+```bash
+docker images seo* -aq | xargs docker image rm
+```
